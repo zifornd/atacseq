@@ -1,0 +1,22 @@
+# Configuration file
+configfile: "config/config.yaml"
+
+# Report file
+report: "report/workflow.rst"
+
+# Container image
+container: "docker://continuumio/miniconda3"
+
+# Workflow rules
+include: "rules/common.smk"
+include: "rules/bowtie2.smk"
+include: "rules/cutadapt.smk"
+include: "rules/deeptools.smk"
+include: "rules/genomepy.smk"
+include: "rules/macs2.smk"
+include: "rules/multiqc.smk"
+
+# Default rule
+rule all:
+    input:
+        get_final_output()
