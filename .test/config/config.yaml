@@ -1,0 +1,11 @@
+samples: config/samples.tsv
+
+units: config/units.tsv
+
+organism: Mus musculus
+
+# union or intersect
+consensus: union
+
+# tmm or loess
+normalization: tmm
